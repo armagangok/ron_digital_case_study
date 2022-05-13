@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PageIndicatorViewModel extends ChangeNotifier {
+class IndicatorViewModel extends ChangeNotifier {
   int activeIndex = 0;
 
   void changeIndex(int index) {

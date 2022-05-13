@@ -4,9 +4,9 @@ import 'package:ron_digital/screens/app/home/home.dart';
 import 'package:ron_digital/screens/app/home/view-models/qr_viewmodel.dart';
 
 import './screens/app/home/view-models/controller_provider.dart';
-import './screens/app/home/view-models/page_indicator_viewmodel.dart';
 import './screens/auth/providers/checkbox_viewmodel.dart';
 import './screens/auth/providers/controller_provider.dart';
+import 'core/view-models/page_indicator_viewmodel.dart';
 
 void main() {
   runApp(
@@ -15,7 +15,7 @@ void main() {
         // ChangeNotifierProvider(create: (_) => GlobalViewModel()),
         // ChangeNotifierProvider(create: (_) => PageIndicator()),
         ChangeNotifierProvider(create: (_) => CheckBoxViewModel()),
-        ChangeNotifierProvider(create: (_) => PageIndicatorViewModel()),
+        ChangeNotifierProvider(create: (_) => IndicatorViewModel()),
         ChangeNotifierProvider(create: (_) => QrViewModel()),
         Provider(create: (_) => SigninPageControllerProvider()),
         Provider(create: (_) => HomeScreenControllerProvider()),

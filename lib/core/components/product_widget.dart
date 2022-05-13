@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../../../core/extension/context_extension.dart';
+import '../extension/context_extension.dart';
 import '../view-models/page_indicator_viewmodel.dart';
 
 class ProductWidget extends StatelessWidget {
@@ -11,39 +11,35 @@ class ProductWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    PageIndicatorViewModel _indicator =
-        Provider.of<PageIndicatorViewModel>(context);
+    IndicatorViewModel _indicator = Provider.of<IndicatorViewModel>(context);
+
     return Column(
       children: [
-        buildSliderIndicator(_indicator.activeIndex),
+        _buildSliderIndicator(_indicator.activeIndex),
         _buildCarousel(context, _indicator),
       ],
     );
   }
 
   CarouselSlider _buildCarousel(
-      BuildContext context, PageIndicatorViewModel indicator) {
+      BuildContext context, IndicatorViewModel indicator) {
     return CarouselSlider.builder(
       itemCount: 5,
       itemBuilder: (context, index, realIndex) {
-        return buildSampleProduct(index);
+        return buildProduct(index);
       },
       options: CarouselOptions(
           autoPlay: true,
           height: context.getHeight(0.3),
           viewportFraction: 1,
           enlargeStrategy: CenterPageEnlargeStrategy.height,
-          onPageChanged: (index, reason) {
-            indicator.changeIndex(index);
-          }),
+          onPageChanged: (index, reason) => indicator.changeIndex(index)),
     );
   }
 
-  Widget buildSampleProduct(int index) {
-    return _icons[index];
-  }
+  Widget buildProduct(int index) => _icons[index];
 
-  Widget buildSliderIndicator(int activeIndex) {
+  Widget _buildSliderIndicator(int activeIndex) {
     return AnimatedSmoothIndicator(
       activeIndex: activeIndex,
       count: 5,
@@ -78,3 +74,4 @@ List<Icon> _icons = const [
     size: 150,
   ),
 ];
+

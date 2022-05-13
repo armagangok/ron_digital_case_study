@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 import './components/components.dart';
 import './components/qr_widget.dart';
-import './components/sample_product_widget.dart';
 import './components/text_fields.dart';
+import '../../../core/components/product_widget.dart';
 import '../../../global/components/components.dart';
+import './components/buttons.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
