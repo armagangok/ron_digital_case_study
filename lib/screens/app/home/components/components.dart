@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-
-import '../view-models/controller_provider.dart';
-import '../view-models/qr_viewmodel.dart';
 import './text_fields.dart';
-import '../../../../core/components/global_elevated_button.dart';
 import '../../../../global/components/components.dart';
 
 class TextFieldStack extends StatelessWidget {
@@ -24,4 +19,3 @@ class TextFieldStack extends StatelessWidget {
     );
   }
 }
-

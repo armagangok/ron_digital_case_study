@@ -26,7 +26,7 @@ class ProductWidget extends StatelessWidget {
     return CarouselSlider.builder(
       itemCount: 5,
       itemBuilder: (context, index, realIndex) {
-        return buildProduct(index);
+        return _buildProduct(index);
       },
       options: CarouselOptions(
           autoPlay: true,
@@ -37,7 +37,7 @@ class ProductWidget extends StatelessWidget {
     );
   }
 
-  Widget buildProduct(int index) => _icons[index];
+  Widget _buildProduct(int index) => _icons[index];
 
   Widget _buildSliderIndicator(int activeIndex) {
     return AnimatedSmoothIndicator(

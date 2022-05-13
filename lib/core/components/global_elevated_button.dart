@@ -14,7 +14,7 @@ class GlobalElevatedButton extends StatelessWidget {
   GlobalElevatedButton({
     Key? key,
     required this.onPressed,
-    required this.text,
+    required this.text ,
     this.color,
     this.textColor = Colors.white,
     this.borderSideColor,
