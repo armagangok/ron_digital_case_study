@@ -11,6 +11,8 @@ class QRWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     QrViewModel _qrViewModel = Provider.of<QrViewModel>(context);
 
+    print(_qrViewModel.getUrl);
+
     return QrImage(
       backgroundColor: Colors.white,
       data: _qrViewModel.getUrl,

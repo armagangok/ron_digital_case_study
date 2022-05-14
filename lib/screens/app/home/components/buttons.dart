@@ -15,9 +15,9 @@ class CreateQRCodeButton extends StatelessWidget {
     QrViewModel _qrViewModel = Provider.of<QrViewModel>(context);
     HomeScreenControllerProvider _controllers =
         Provider.of<HomeScreenControllerProvider>(context);
-    String newUrl = _controllers.urlController.text;
+
     return GlobalElevatedButton(
-      onPressed: () => _qrViewModel.setUrl = newUrl,
+      onPressed: () => _qrViewModel.changeUrl = _controllers.urlController.text,
       text: "Create QR Code",
     );
   }
@@ -41,7 +41,9 @@ class LogoutButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () => pop(const LoginScreen(), context),
+      onPressed: () {
+        pop(const LoginScreen(), context);
+      },
       child: const Text("Logout"),
     );
   }
