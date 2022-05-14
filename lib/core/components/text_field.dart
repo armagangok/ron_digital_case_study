@@ -7,15 +7,17 @@ class GlobalTextField extends StatefulWidget {
   final TextEditingController controller;
   final bool isObscure;
   final String hintText;
+  final void Function(String)? onChanged;
 
   const GlobalTextField({
     Key? key,
+    required this.controller,
+    required this.hintText,
     this.initialValue,
     this.inputType,
     this.height,
-    required this.controller,
     this.isObscure = false,
-    required this.hintText,
+    this.onChanged,
   }) : super(key: key);
 
   @override
@@ -28,8 +30,7 @@ class _GlobalTextFieldState extends State<GlobalTextField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-
-      initialValue: widget.initialValue,
+      // initialValue: widget.initialValue,
       controller: widget.controller,
       // style: const TextStyle(color: Colors.black, fontSize: 14),
       maxLines: 1,
@@ -54,7 +55,7 @@ class _GlobalTextFieldState extends State<GlobalTextField> {
 
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
       ),
-      onChanged: (value){},
+      onChanged: widget.onChanged  ,
     );
   }
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../../core/components/global_elevated_button.dart';
 import '../../../../core/navigation/navigation.dart';
 import '../../../app/home/home.dart';
+import '../../providers/controller_provider.dart';
 import '../../screen_register/register.dart';
 
 class LoginButton extends StatelessWidget {
@@ -10,9 +12,12 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final LoginScreenControllerProvider _controllers =
+        Provider.of<LoginScreenControllerProvider>(context);
     return GlobalElevatedButton(
       onPressed: () {
         push(const HomeScreen(), context);
+        // print(_controllers.getEmail.text.runtimeType);
       },
       text: "Login",
     );

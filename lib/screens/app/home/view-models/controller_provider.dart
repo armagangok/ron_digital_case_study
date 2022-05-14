@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 
 class HomeScreenControllerProvider {
-  TextEditingController _number1Controller = TextEditingController();
-  TextEditingController _number2Controller = TextEditingController();
+  TextEditingController _number1Controller = TextEditingController(text: "0");
+  TextEditingController _number2Controller = TextEditingController(text: "0");
   TextEditingController _resultController = TextEditingController();
   TextEditingController _urlController = TextEditingController();
 
