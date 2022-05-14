@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './global/providers/provider_helper.dart';
-import './screens/app/home/home.dart';
+import './screens/auth/screen_login/login.dart';
 
 void main() {
   runApp(
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ron Digital',
       theme: ThemeData.dark(),
-      home: const HomeScreen(),
+      home: const LoginScreen(),
     );
   }
 }

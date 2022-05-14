@@ -29,11 +29,12 @@ class ProductWidget extends StatelessWidget {
         return _buildProduct(index);
       },
       options: CarouselOptions(
-          autoPlay: true,
-          height: context.getHeight(0.3),
-          viewportFraction: 1,
-          enlargeStrategy: CenterPageEnlargeStrategy.height,
-          onPageChanged: (index, reason) => indicator.changeIndex(index)),
+        autoPlay: true,
+        height: context.getHeight(0.3),
+        viewportFraction: 1,
+        enlargeStrategy: CenterPageEnlargeStrategy.height,
+        onPageChanged: (index, reason) => indicator.changeIndex(index),
+      ),
     );
   }
 
@@ -74,4 +75,3 @@ List<Icon> _icons = const [
     size: 150,
   ),
 ];
-

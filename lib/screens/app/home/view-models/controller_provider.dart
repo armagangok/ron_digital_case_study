@@ -15,8 +15,8 @@ class HomeScreenControllerProvider {
       _number1Controller = controller;
   set setNumber2Controller(TextEditingController controller) =>
       _number2Controller = controller;
-  set setUrlController(TextEditingController controller) =>
-      _urlController = controller;
   set setResultController(TextEditingController controller) =>
       _resultController = controller;
+  set setUrlController(TextEditingController controller) =>
+      _urlController = controller;
 }

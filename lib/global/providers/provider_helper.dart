@@ -14,8 +14,8 @@ class ProviderHelper {
     ChangeNotifierProvider(create: (_) => CheckBoxViewModel()),
     ChangeNotifierProvider(create: (_) => IndicatorViewModel()),
     ChangeNotifierProvider(create: (_) => QrViewModel()),
-    Provider(create: (_) => SigninPageControllerProvider()),
+    Provider(create: (_) => LoginScreenControllerProvider()),
     Provider(create: (_) => HomeScreenControllerProvider()),
-    Provider(create: (_) => RegisterPageControllerProvider()),
+    Provider(create: (_) => RegisterScreenControllerProvider()),
   ];
 }

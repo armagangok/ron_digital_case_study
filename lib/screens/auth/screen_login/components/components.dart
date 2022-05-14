@@ -1,30 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/components/global_elevated_button.dart';
-import '../../../../core/navigation/navigation.dart';
-import '../../../app/home/home.dart';
-import '../../components/widgets.dart';
-
-class LoginButton extends StatelessWidget {
-  const LoginButton({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GlobalElevatedButton(
-      onPressed: () {
-        push(const HomeScreen(), context);
-      },
-      text: "Login",
-    );
-  }
-}
+import './buttons.dart';
+import './checkbox.dart';
 
 class RememberMeAndCheckBox extends StatelessWidget {
-  const RememberMeAndCheckBox({
-    Key? key,
-  }) : super(key: key);
+  const RememberMeAndCheckBox({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

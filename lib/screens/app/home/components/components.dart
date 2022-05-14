@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './text_fields.dart';
-import '../../../../global/components/components.dart';
+import '../../../../core/components/sized_box.dart';
 
 class TextFieldStack extends StatelessWidget {
   const TextFieldStack({Key? key}) : super(key: key);

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +10,6 @@ class DialogMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log(context.widget.runtimeType.toString() + "build run");
     return CupertinoAlertDialog(
       title: Column(
         children: [
@@ -29,3 +26,6 @@ void dialog(context, text) {
     builder: (_) => DialogMessage(text: text),
   );
 }
+
+
+    // log(context.widget.runtimeType.toString() + "build run");

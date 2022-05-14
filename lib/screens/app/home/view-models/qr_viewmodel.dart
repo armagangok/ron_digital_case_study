@@ -5,7 +5,7 @@ class QrViewModel with ChangeNotifier {
 
   String get getUrl => _qrUrl;
 
-   set changeUrl(String newQRUrl) {
+  set setUrl(String newQRUrl) {
     _qrUrl = newQRUrl;
     notifyListeners();
   }

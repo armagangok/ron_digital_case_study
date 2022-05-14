@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-class SigninPageControllerProvider {
+class LoginScreenControllerProvider {
   TextEditingController _password = TextEditingController();
   TextEditingController _username = TextEditingController();
 
@@ -11,7 +11,7 @@ class SigninPageControllerProvider {
   set setEmail(TextEditingController username) => _username = username;
 }
 
-class RegisterPageControllerProvider {
+class RegisterScreenControllerProvider {
   TextEditingController _usernameController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
@@ -27,4 +27,3 @@ class RegisterPageControllerProvider {
   set setPasswordController(TextEditingController controller) =>
       _passwordController = controller;
 }
-

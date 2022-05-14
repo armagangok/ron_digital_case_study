@@ -5,9 +5,7 @@ import 'package:qr_flutter/qr_flutter.dart';
 import '../view-models/qr_viewmodel.dart';
 
 class QRWidget extends StatelessWidget {
-  const QRWidget({
-    Key? key,
-  }) : super(key: key);
+  const QRWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

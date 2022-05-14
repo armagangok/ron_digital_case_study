@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/components/global_elevated_button.dart';
+import '../../../../core/navigation/navigation.dart';
+import '../../../auth/screen_login/login.dart';
 import '../view-models/controller_provider.dart';
 import '../view-models/qr_viewmodel.dart';
 
@@ -13,9 +15,9 @@ class CreateQRCodeButton extends StatelessWidget {
     QrViewModel _qrViewModel = Provider.of<QrViewModel>(context);
     HomeScreenControllerProvider _controllers =
         Provider.of<HomeScreenControllerProvider>(context);
-    String url = _controllers.urlController.text;
+    String newUrl = _controllers.urlController.text;
     return GlobalElevatedButton(
-      onPressed: () => _qrViewModel.changeUrl = url,
+      onPressed: () => _qrViewModel.setUrl = newUrl,
       text: "Create QR Code",
     );
   }
@@ -39,7 +41,7 @@ class LogoutButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () => pop(const LoginScreen(), context),
       child: const Text("Logout"),
     );
   }
