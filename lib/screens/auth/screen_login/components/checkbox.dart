@@ -12,10 +12,8 @@ class CheckBoxWidget extends StatelessWidget {
     return Checkbox(
       side: const BorderSide(color: Colors.white),
       value: _checkBox.value,
-      activeColor: Colors.red,
-      onChanged: (bool? e) {
-        _checkBox.changeCheckBox(e!);
-      },
+      activeColor: Colors.greenAccent,
+      onChanged: (bool? e) => _checkBox.changeCheckBox(e!),
     );
   }
 }

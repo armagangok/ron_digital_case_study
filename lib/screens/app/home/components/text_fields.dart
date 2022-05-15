@@ -19,7 +19,7 @@ class Number2TextField extends StatelessWidget {
         controller: _controllers.number2Controller,
         hintText: 'Number 2',
         onChanged: (value) {
-          _controllers.number2Controller.text = value;
+          _controllers.setNumber2Controller = value;
           _textfeldViewModel.reloadWidget();
         });
   }
@@ -39,7 +39,7 @@ class Number1TextField extends StatelessWidget {
         controller: _controllers.number1Controller,
         hintText: 'Number 1',
         onChanged: (value) {
-          _controllers.number1Controller.text = value;
+          _controllers.setNumber1Controller = value;
           _textfeldViewModel.reloadWidget();
         });
   }

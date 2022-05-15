@@ -35,3 +35,29 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
+// class TestWidget extends StatelessWidget {
+//   const TestWidget({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       height: 320,
+//       child: ValueListenableBuilder<Box<UserModel>>(
+//         valueListenable: Boxes.getUsers().listenable(),
+//         builder: (context, box, _) {
+//           final data = box.values.toList();
+//           return ListView.builder(
+//             itemCount: data.length,
+//             itemBuilder: (context, index) {
+//               return ListTile(
+//                 title: Text(data[index].email),
+//                 subtitle: Text(data[index].password),
+//               );
+//             },
+//           );
+//         },
+//       ),
+//     );
+//   }
+// }

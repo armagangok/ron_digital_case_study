@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:ron_digital/screens/auth/providers/checkbox_viewmodel.dart';
 
 import '../../../../core/components/global_elevated_button.dart';
-import '../../../../core/navigation/navigation.dart';
-import '../../../app/home/home.dart';
+// import '../../../../core/navigation/navigation.dart';
+// import '../../../app/home/home.dart';
+import '../../../../core/local/database/models/user_model.dart';
+import '../../../../core/local/database/viewmodels/hive_viewmodel.dart';
 import '../../providers/controller_provider.dart';
 import '../../screen_register/register.dart';
 
@@ -14,10 +17,25 @@ class LoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final LoginScreenControllerProvider _controllers =
         Provider.of<LoginScreenControllerProvider>(context);
+
+    final HiveViewModel _hiveDatabase = Provider.of<HiveViewModel>(context);
+    final CheckBoxViewModel _checkBox = Provider.of<CheckBoxViewModel>(context);
+
     return GlobalElevatedButton(
-      onPressed: () {
-        push(const HomeScreen(), context);
-        // print(_controllers.getEmail.text.runtimeType);
+      onPressed: () async {
+        UserModel _user = UserModel(
+          email: _controllers.emailtext,
+          password: _controllers.passwordText,
+        );
+
+        if (_user.email == "" || _user.password == "") {
+        } else {
+          if (_checkBox.value == true) {
+            await _hiveDatabase.saveData(_user);
+          }
+        }
+
+        // push(const HomeScreen(), context);
       },
       text: "Login",
     );

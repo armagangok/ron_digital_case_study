@@ -1,5 +1,6 @@
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
+import 'package:ron_digital/core/local/database/viewmodels/hive_viewmodel.dart';
 
 
 import '../../core/view-models/page_indicator_viewmodel.dart';
@@ -17,6 +18,7 @@ class ProviderHelper {
     ChangeNotifierProvider(create: (_) => IndicatorViewModel()),
     ChangeNotifierProvider(create: (_) => QrViewModel()),
     ChangeNotifierProvider(create: (_) => TextFieldViewModel()),
+    ChangeNotifierProvider(create: (_) => HiveViewModel()),
     Provider(create: (_) => LoginScreenControllerProvider()),
     Provider(create: (_) => HomeScreenControllerProvider()),
     Provider(create: (_) => RegisterScreenControllerProvider()),
