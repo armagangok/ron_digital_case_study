@@ -48,7 +48,6 @@ class EmailTextField extends StatelessWidget {
         return GlobalTextField(
           hintText: "Email",
           controller: _controllers.getEmail,
-          isObscure: true,
         );
       },
     );

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ron_digital/screens/auth/providers/checkbox_viewmodel.dart';
 
 import '../../../../core/components/global_elevated_button.dart';
-// import '../../../../core/navigation/navigation.dart';
-// import '../../../app/home/home.dart';
 import '../../../../core/local/database/models/user_model.dart';
 import '../../../../core/local/database/viewmodels/hive_viewmodel.dart';
+import '../../../../core/navigation/navigation.dart';
+import '../../../app/home/home.dart';
+import '../../providers/checkbox_viewmodel.dart';
 import '../../providers/controller_provider.dart';
 import '../../screen_register/register.dart';
 
@@ -35,7 +35,7 @@ class LoginButton extends StatelessWidget {
           }
         }
 
-        // push(const HomeScreen(), context);
+        push(const HomeScreen(), context);
       },
       text: "Login",
     );

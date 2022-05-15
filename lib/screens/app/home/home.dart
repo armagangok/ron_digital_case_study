@@ -6,6 +6,7 @@ import './components/qr_widget.dart';
 import './components/text_fields.dart';
 import '../../../core/components/product_widget.dart';
 import '../../../core/components/sized_box.dart';
+import '../../../core/extension/context_extension.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -18,25 +19,37 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(
-              children: const [
-                ProductWidget(),
-                SizedBox002V(),
-                TextFieldStack(),
-                SizedBox002V(),
-                LogoutButton(),
-                QRWidget(),
-                SizedBox002V(),
-                UrlTextField(),
-                SizedBox002V(),
-                CreateQRCodeButton(),
-                SizedBox002V(),
-                ScanQRCodeButton(),
-              ],
+            child: SizedBox(
+              height: context.getHeight(1.5),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  ProductWidget(),
+                  AdminUsernameText(),
+                  TextFieldStack(),
+                  LogoutButton(),
+                  QRWidget(),
+                  SizedBox002V(),
+                  UrlTextField(),
+                  CreateQRCodeButton(),
+                  ScanQRCodeButton(),
+                ],
+              ),
             ),
           ),
         ),
       ),
     );
+  }
+}
+
+class AdminUsernameText extends StatelessWidget {
+  const AdminUsernameText({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text("data");
   }
 }

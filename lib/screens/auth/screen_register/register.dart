@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ron_digital/core/components/sized_box.dart';
 
 import './components/buttons.dart';
 import './components/text_fields.dart';
@@ -16,8 +17,11 @@ class RegisterScreen extends StatelessWidget {
           child: Column(
             children: const [
               UsernameTextField(),
+              SizedBox002V(),
               EmailTextField(),
+              SizedBox002V(),
               PasswordTextField(),
+              SizedBox002V(),
               RegisterButton(),
             ],
           ),

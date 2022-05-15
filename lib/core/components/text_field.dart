@@ -55,7 +55,7 @@ class _GlobalTextFieldState extends State<GlobalTextField> {
 
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
       ),
-      onChanged: widget.onChanged  ,
+      onChanged: widget.onChanged,
     );
   }
 }
@@ -79,7 +79,7 @@ class NewWidget extends StatelessWidget {
               ? Icons.visibility_off
               : Icons.visibility
           : null,
-      color: Theme.of(context).primaryColorDark,
+      // color: Theme.of(context).primaryColorDark,
     );
   }
 }
