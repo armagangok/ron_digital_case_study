@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 class LoginScreenControllerProvider {
   final TextEditingController _password = TextEditingController();
   final TextEditingController _username = TextEditingController();
+  final TextEditingController username = TextEditingController();
+  final TextEditingController password = TextEditingController();
 
   TextEditingController get getPassword => _password;
   TextEditingController get getEmail => _username;

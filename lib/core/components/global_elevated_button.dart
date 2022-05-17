@@ -14,7 +14,7 @@ class GlobalElevatedButton extends StatelessWidget {
   GlobalElevatedButton({
     Key? key,
     required this.onPressed,
-    required this.text ,
+    required this.text,
     this.color,
     this.textColor = Colors.white,
     this.borderSideColor,
@@ -23,29 +23,32 @@ class GlobalElevatedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      child: AutoSizeText(
-        text,
-        style: TextStyle(color: textColor ?? borderSideColor),
-        maxFontSize: 14,
-        minFontSize: 13,
-      ),
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        primary: color,
-        shape: RoundedRectangleBorder(
-          side: isThereBorderSide
-              ? BorderSide(color: borderSideColor ?? Colors.white)
-              : BorderSide.none,
-          borderRadius: BorderRadius.circular(10),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ElevatedButton(
+        child: AutoSizeText(
+          text,
+          style: TextStyle(color: textColor ?? borderSideColor),
+          maxFontSize: 14,
+          minFontSize: 13,
         ),
-        // maximumSize: Size(
-        //   context.getWidth(0.6),
-        //   context.getHeight(0.06),
-        // ),
-        minimumSize: Size(
-          context.getWidth(1),
-          context.getHeight(0.08),
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          // primary: color,
+          shape: RoundedRectangleBorder(
+            side: isThereBorderSide
+                ? BorderSide(color: borderSideColor ?? Colors.white)
+                : BorderSide.none,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          // maximumSize: Size(
+          //   context.getWidth(0.6),
+          //   context.getHeight(0.06),
+          // ),
+          minimumSize: Size(
+            context.getWidth(1),
+            context.getHeight(0.08),
+          ),
         ),
       ),
     );

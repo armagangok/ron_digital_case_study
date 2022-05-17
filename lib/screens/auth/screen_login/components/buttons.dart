@@ -30,12 +30,15 @@ class LoginButton extends StatelessWidget {
 
         if (_user.email == "" || _user.password == "") {
         } else {
-          if (_checkBox.value == true) {
-            await _hiveDatabase.saveData(_user);
+          if (_controllers.emailtext == 'Armağan' &&
+              _controllers.passwordText == 'password1234') {
+            if (_checkBox.value == true) {
+              await _hiveDatabase.saveData(_user);
+            }
+
+            push(const HomeScreen(), context);
           }
         }
-
-        push(const HomeScreen(), context);
       },
       text: "Login",
     );
